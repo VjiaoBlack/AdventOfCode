@@ -6,13 +6,11 @@ int main() {
     int fl = 0;
 
     printf("cat <input> | ./first\n");
-    while ((c = getchar())) {
+    while ((c = getchar()) > 0) {
         if (c == '(')
             ++fl;
-        else if (c == ')')
-            --fl;
         else
-            break;
+            --fl;
     }
     printf("%d\n", fl);
 }
